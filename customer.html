@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .nav-bar{
+            background: white;
+            height: 80px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        .search{
+            width: 50%;
+            border-radius: 10px;
+
+
+        }
+        .content{
+            border-radius: 10px;
+            background-color: #CCD5AE;
+
+        }
+        #header{
+            background: #0a53be;
+            color: white;
+        }
+        .modal-header{
+            background: #146C43;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<nav class="nav-bar">
+    <a href="" class="navbar-brand fs-1 ms-3 text-#FF7900" id="logo">Grocery</a>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link active mx-4 text-black fs-5" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mx-4 text-black fs-5" href="#">Item</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mx-4 text-black fs-5" href="#">Customers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mx-4 text-black fs-5" href="#">Orders</a>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="container" style="margin-left: 7rem; margin-top: 2rem">
+    <form class="d-flex" role="search">
+        <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-info" type="submit">Search</button>
+    </form>
+</div>
+
+<div class="container">
+    <div class="row">
+
+
+        <div class="col col-xxl-8 col-xl-8 col-lg-4 col-md-4 col-sm-12">
+
+
+            <form>
+                <div class="mb-3 col-md-6">
+                    <label for="customer-id" class="form-label">Customer ID</label>
+                    <input type="number" class="form-control content" id="customer-id">
+
+                </div>
+
+                <div class="mb-3 col-md-6">
+                    <label for="name" class="form-label">Customer Name</label>
+                    <input type="text" class="form-control content" id="name">
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact</label>
+                    <input type="text" class="form-control content" id="contact">
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="address">Address</label>
+                    <textarea class="form-control content" placeholder="Enter your address" id="address"></textarea>
+
+                </div>
+
+
+
+
+                <table class="table table-bordered" id="content-table">
+                    <thead class="bg-info text-white  ">
+                    <tr id="header " class="bg-info">
+                        <th>Customer ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>Contact</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+
+                        <td>S001</td>
+                        <td>Umesha</td>
+                        <td>Wickckramarachchi</td>
+                        <td>Horana</td>
+                        <td>GDSE</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>S002</td>
+                        <td>Umesha</td>
+                        <td>Wickckramarachchi</td>
+                        <td>Horana</td>
+                        <td>GDSE</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>S003</td>
+                        <td>Umesha</td>
+                        <td>Wickckramarachchi</td>
+                        <td>Horana</td>
+                        <td>GDSE</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>S004</td>
+                        <td>Umesha</td>
+                        <td>Wickckramarachchi</td>
+                        <td>Horana</td>
+                        <td>GDSE</td>
+
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+
+            </form>
+        </div>
+
+
+
+
+        <div class="col">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" class="btn btn-primary bg-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Add New Customer
+                </button>
+                <button class="btn btn-primary" type="button">Update</button>
+                <button class="btn btn-warning" type="button">Delete</button>
+                <button class="btn btn-danger" type="button">Clear</button>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">New Customer</h1>
+                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3 col-md-6">
+                            <label for="name" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control content" id="new-customer-name">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<script src="assets/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
