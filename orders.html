@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order section</title>
+</head>
+<body>
+<!--Order Section-->
+<div class="container" id="order-section">
+    <div class="py-5 text-center">
+        <h2>Place Order Form</h2>
+    </div>
+
+
+    <div class="container" style="background: #aaf683">
+        <h4 class="mb-4">Customer Details</h4>
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label class="form-label">Customer ID</label>
+                    <select class="form-select content" aria-label="Default select example">
+                    </select>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="customerName" class="form-label">Customer Name</label>
+                    <input id="customerName" type="text" class="form-control content">
+                </div>
+
+
+                <div class="col-sm-6">
+                    <label for="customerContact" class="form-label">Customer Contact</label>
+                    <input id="customerContact" type="tel" class="form-control content">
+                </div>
+
+                <div class="col-sm-6">
+
+                    <label for="customerAddress" class="form-label">Address</label>
+                    <textarea class="form-control content" id="customerAddress" rows="3"></textarea>
+                </div>
+
+                <hr class="my-4">
+            </div>
+        </form>
+    </div>
+
+    <!--Item Details Form-->
+
+    <div class="container mt-5 py-5" style="background: #aaf683">
+        <h4 class="mb-4">Item Details</h4>
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label class="form-label">Item Code</label>
+                    <select class="form-select content item-drop" id="customer-selector" aria-label="Default select example">
+                    </select>
+
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="itemName" class="form-label">Item Name</label>
+                    <input id="itemName" type="text" class="form-control content">
+                </div>
+
+
+
+                <div class="col-sm-6">
+
+                    <label for="itemPrice" class="form-label">Item Price</label>
+                    <input id="itemPrice" type="text" class="form-control content">
+                </div>
+
+                <div class="col-sm-6">
+
+                    <label for="itemQty" class="form-label">Quantity</label>
+                    <input id="itemQty" type="number" class="form-control content">
+                </div>
+
+                <hr class="my-4">
+            </div>
+
+            <div class="col-sm-6">
+                <label for="orderQty" class="form-label">Quantity</label>
+                <input id="orderQty" type="number" class="form-control content">
+
+            </div>
+            <div class="col-sm-6">
+                <label for="orderPrice" class="form-label">Item Price</label>
+                <input id="orderPrice" type="text" class="form-control content">
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
